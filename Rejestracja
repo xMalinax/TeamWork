@@ -1,0 +1,52 @@
+package salon;
+import java.util.Scanner;
+public class FRYZJERSKi {
+    public static void main(String[] args) {
+        int rollno,chkl;;
+        String usrname,uniname,celno,Remailadress,Rpass,lemailadress,lpass;
+        System.out.println("\t\t\t\t\t\t\t\t Age Counter ");
+        Scanner s1=new Scanner(System.in);
+        System.out.println(" Prosze sie zarejestrowac :) \n ");
+        System.out.print(" Prosze podac swoje imie      : ");
+        usrname=s1.nextLine();
+        System.out.print("Prosze podac swoj numer telefonu   : ");
+        celno=s1.nextLine();
+        System.out.print("Prosze podac swoje nazwisko       : ");
+        uniname=s1.nextLine();
+        System.out.print("Prosze podac swoj identyfikator        : ");
+        rollno=s1.nextInt();
+        s1.nextLine();
+        System.out.print("Prosze podac swoj adres email   : ");
+        Remailadress=s1.nextLine();
+        System.out.print("Prosze podac swoje haslo ( musi zawierac jedna duza litere i cyfre ) : ");
+        Rpass=s1.nextLine();
+        System.out.println("zarejestrowales sie, dziekuje :)");
+        System.out.println("jesli chcesz sie zalogowac wcisnij 1 : )");
+        chkl=s1.nextInt();
+       if(chkl==1)
+       {
+         s1.nextLine();
+         System.out.print("Prosze podac swoj adres email : ");
+         lemailadress=s1.nextLine();
+         if(lemailadress.equals(Remailadress))
+         {
+              System.out.print("Prosze podac swoje haslo   : ");
+              lpass=s1.nextLine();
+              if(lpass.equals(Rpass))
+              {
+                  System.out.println("Zalogowales sie  ");
+                  System.out.println("Twoje dane to  >>> ");
+                  System.out.println("User name is  : "+ usrname + "\nUNI name is   :  "+ uniname+"\n Rollno is     :  "+ rollno+"\n Cell no is    :  "+ celno);
+              }
+              else
+              {
+                  System.out.println("Haslo jest nieprawidlowe !  ");
+              }
+         }
+         else
+         {
+             System.out.println("EMAIL jest nieprawidlowy !  ");
+         }
+       }
+    }
+}
