@@ -617,13 +617,13 @@ public class OFERTAKOSMFRYZ extends javax.swing.JFrame {
             subtotal = subtotal + 55; 
         }if (jCheckBox13.isSelected()){
             subtotal = subtotal + 15; 
-            
-            wynik.setText(Double.toString(subtotal));
-            
-            subtotal = Double.parseDouble(wynik.getText());
+        }
+                    
+        wynik.setText(Double.toString(subtotal));   
+        subtotal = Double.parseDouble(wynik.getText());
             
     }//GEN-LAST:event_btn_obliczActionPerformed
-    }
+   
     // ------------switch between colors for Active/Inactive color
     public void setLblColor(JLabel lbl)
     {
