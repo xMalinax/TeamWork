@@ -236,12 +236,14 @@ public class Pracownicy extends javax.swing.JFrame {
         // TODO add your handling code here:
         OFERTAKOSMFRYZ obj = new OFERTAKOSMFRYZ();
         obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Podsum obj = new Podsum();
         obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

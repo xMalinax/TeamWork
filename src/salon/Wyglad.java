@@ -248,6 +248,7 @@ public class Wyglad extends javax.swing.JFrame {
         // TODO add your handling code here:
               OFERTAKOSMFRYZ obj = new OFERTAKOSMFRYZ();
         obj.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed

@@ -526,6 +526,7 @@ public class OFERTAKOSMFRYZ extends javax.swing.JFrame {
         // TODO add your handling code here:
                 Wyglad obj = new Wyglad();
         obj.setVisible(true);
+        this.setVisible(false);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -533,6 +534,7 @@ public class OFERTAKOSMFRYZ extends javax.swing.JFrame {
         // TODO add your handling code here:
                 Pracownicy obj = new Pracownicy();
         obj.setVisible(true);
+        this.setVisible(false);
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
