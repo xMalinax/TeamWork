@@ -270,6 +270,11 @@ public class OFERTAKOSMFRYZ extends javax.swing.JFrame {
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox1.setText("Modelowanie 35 zł");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jCheckBox2.setText("Przedłużanie włosów 95 zł");
@@ -532,10 +537,65 @@ public class OFERTAKOSMFRYZ extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-                Pracownicy obj = new Pracownicy();
+        Pracownicy obj = new Pracownicy();
         obj.setVisible(true);
         this.setVisible(false);
+        
+        Podsum.uslugi = ""; //ustawia na puste
+        if (jCheckBox1.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Modelowanie ";
+        }
+        
+        if (jCheckBox2.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Przedłużanie włosów ";
+        }
+        
+        if (jCheckBox3.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Koloryzacja ";
+        }
+        
+        if (jCheckBox4.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Zabiegi regeneracyjne ";
+        }
+        
+        if (jCheckBox5.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Strzyżenie męskie ";
+        }
 
+        if (jCheckBox6.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Strzyżenie damskie ";
+        }
+        
+        if (jCheckBox14.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Upięcia ";
+        }
+        
+        if (jCheckBox7.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Pediciure ";
+        }
+        
+        if (jCheckBox8.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Maniciure ";
+        }  
+        if (jCheckBox9.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Mikrodermabrazja";
+        }
+        
+        if (jCheckBox11.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Woskowanie ";
+        }
+        
+        if (jCheckBox10.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Peeling ";
+        }
+    
+        if (jCheckBox12.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Mezoterapia ";
+        }
+        
+        if (jCheckBox13.isSelected()) {
+            Podsum.uslugi = Podsum.uslugi + "Henna ";
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btn_ofertaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_ofertaMouseClicked
@@ -625,6 +685,10 @@ public class OFERTAKOSMFRYZ extends javax.swing.JFrame {
         subtotal = Double.parseDouble(wynik.getText());
             
     }//GEN-LAST:event_btn_obliczActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
    
     // ------------switch between colors for Active/Inactive color
     public void setLblColor(JLabel lbl)

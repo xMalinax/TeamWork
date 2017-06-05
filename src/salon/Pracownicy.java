@@ -5,6 +5,8 @@
  */
 package salon;
 
+import java.text.SimpleDateFormat;
+
 /**
  *
  * @author REDRUM
@@ -241,6 +243,27 @@ public class Pracownicy extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(jDateChooser1.getDateFormatString()); 
+        Podsum.data = simpleDateFormat.format(jDateChooser1.getCalendar().getTime());
+        Podsum.godzina = jComboBox1.getSelectedItem().toString();
+        
+        Podsum.dodatkowe = "Kosmetyczka: ";
+        if (jCheckBox1.isSelected()) {
+            Podsum.dodatkowe = Podsum.dodatkowe + "Monika ";
+        }
+        
+        if (jCheckBox2.isSelected()) {
+            Podsum.dodatkowe = Podsum.dodatkowe + "Anna ";
+        }
+        
+        if (jCheckBox3.isSelected()) {
+            Podsum.dodatkowe = Podsum.dodatkowe + "Zosia ";
+        }
+            
+        if (jCheckBox4.isSelected()) {
+            Podsum.dodatkowe = Podsum.dodatkowe + "Sara ";
+        }
+        
         Podsum obj = new Podsum();
         obj.setVisible(true);
         this.setVisible(false);

@@ -11,11 +11,19 @@ package salon;
  */
 public class Podsum extends javax.swing.JFrame {
 
+    public static String uslugi;
+    public static String data;
+    public static String godzina;
+    public static String dodatkowe;
     /**
      * Creates new form Podsum
      */
     public Podsum() {
         initComponents();
+        jTextField1.setText(data);
+        jTextField2.setText(godzina);
+        jTextField3.setText(dodatkowe);
+        jTextField4.setText(uslugi);
     }
 
     /**
@@ -61,6 +69,11 @@ public class Podsum extends javax.swing.JFrame {
         });
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Usługi");
@@ -174,11 +187,15 @@ public class Podsum extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-   Koniec obj = new Koniec();
-           obj.setVisible(true);
-           this.setVisible(false);
+        Koniec obj = new Koniec();
+        obj.setVisible(true);
+        this.setVisible(false);
        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
