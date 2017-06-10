@@ -106,6 +106,11 @@ public class Wyglad extends javax.swing.JFrame {
 
         jTextPane5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextPane5.setToolTipText("imię");
+        jTextPane5.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextPane5KeyPressed(evt);
+            }
+        });
         jScrollPane5.setViewportView(jTextPane5);
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -118,14 +123,29 @@ public class Wyglad extends javax.swing.JFrame {
 
         jTextPane6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextPane6.setToolTipText("nazwisko");
+        jTextPane6.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextPane6KeyPressed(evt);
+            }
+        });
         jScrollPane6.setViewportView(jTextPane6);
 
         jTextPane8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextPane8.setToolTipText("nr. telefonu");
+        jTextPane8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextPane8KeyPressed(evt);
+            }
+        });
         jScrollPane8.setViewportView(jTextPane8);
 
         jTextPane7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextPane7.setToolTipText("e-mail");
+        jTextPane7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextPane7KeyPressed(evt);
+            }
+        });
         jScrollPane7.setViewportView(jTextPane7);
 
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -256,14 +276,37 @@ public class Wyglad extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jRadioButton2StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jRadioButton2StateChanged
-        // TODO add your handling code here:
-        if (jRadioButton2.isSelected()){
-            jButton2.setEnabled(true);
-        }else{
-            jButton2.setEnabled(false);
-        }
+        czyMoznaDalej();
     }//GEN-LAST:event_jRadioButton2StateChanged
 
+    private void jTextPane5KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextPane5KeyPressed
+        czyMoznaDalej();
+    }//GEN-LAST:event_jTextPane5KeyPressed
+
+    private void jTextPane6KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextPane6KeyPressed
+        czyMoznaDalej();
+    }//GEN-LAST:event_jTextPane6KeyPressed
+
+    private void jTextPane8KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextPane8KeyPressed
+        czyMoznaDalej();
+    }//GEN-LAST:event_jTextPane8KeyPressed
+
+    private void jTextPane7KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextPane7KeyPressed
+        czyMoznaDalej();
+    }//GEN-LAST:event_jTextPane7KeyPressed
+
+    private void czyMoznaDalej() {
+        if (jRadioButton2.isSelected() && 
+                !jTextPane5.getText().isEmpty() && 
+                !jTextPane6.getText().isEmpty() && 
+                !jTextPane7.getText().isEmpty() && 
+                !jTextPane8.getText().isEmpty() ) {
+            jButton2.setEnabled(true);
+        } else {
+            jButton2.setEnabled(false);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
